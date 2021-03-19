@@ -8,6 +8,7 @@
 
 import RealmSwift
 import UIKit
+import UserNotifications
 
 /*
  - To show list of current to do list itmes
@@ -36,6 +37,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         table.delegate = self
         table.dataSource = self
+        
+        
+        requestAutorizationForNotifications()
+    }
+    
+    func requestAutorizationForNotifications() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert,.badge,.sound]) { (granted, error) in
+            if granted {
+                print("granted permission")
+            } else {
+                print("permission denied")
+            }
+        }
     }
 
     // Mark: Table

@@ -35,7 +35,7 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
     @objc func didTapSaveButton() {
         if let text = textField.text, !text.isEmpty {
             let date = datePicker.date
-
+            
             realm.beginWrite()
             let newItem = ToDoListItem()
             newItem.date = date
@@ -45,6 +45,23 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
 
             completionHandler?()
             navigationController?.popToRootViewController(animated: true)
+            
+            // IMPORTANT: make reminder
+            let center = UNUserNotificationCenter.current()
+            let content = UNMutableNotificationContent()
+            content.title = "title"
+            content.body = "body of the message"
+            content.sound = .default
+            
+            let earlyDate = Calendar.current.date( byAdding: .minute, value: -30, to: datePicker.date)
+            let comps = Calendar.current.dateComponents([.year, .month, .day, .hour,.minute], from: earlyDate!)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: false)
+            print("TRIGGER")
+            print(trigger.nextTriggerDate())
+            
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            center.add(request)
+            
         }
         else {
             print("Add something")
