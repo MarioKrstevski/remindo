@@ -53,6 +53,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
 
+    // MARK - checkbox
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let complete = completeAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [complete])
+    }
+    
+    func completeAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .destructive, title: "Complete") { (action, view, completition) in
+            self.data.remove(at: indexPath.row)
+            self.table.deleteRows(at: [indexPath], with: .automatic)
+            completition(true)
+            
+        }
+        action.image = UIImage(named: "tick.png")
+        action.backgroundColor = .red
+        return action
+    }
+    
+    
     // Mark: Table
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
