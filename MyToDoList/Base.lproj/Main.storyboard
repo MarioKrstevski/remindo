@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ISf-0d-9Tu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ISf-0d-9Tu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,17 +19,17 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rUM-40-pzr">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rUM-40-pzr" secondAttribute="trailing" id="Y0o-l5-LGa"/>
                             <constraint firstItem="rUM-40-pzr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="abI-bs-wbC"/>
                             <constraint firstItem="rUM-40-pzr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="atm-fQ-360"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rUM-40-pzr" secondAttribute="bottom" id="l5s-gY-6Wl"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="To Do List" id="iZ4-ut-gxh">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="k63-Tc-9mw">
@@ -61,20 +63,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lby-eG-eHW">
-                                <rect key="frame" x="0.0" y="156" width="414" height="706"/>
+                                <rect key="frame" x="20" y="126" width="374" height="216"/>
                             </datePicker>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="rfC-ud-1UI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NNe-nf-TSg" firstAttribute="top" secondItem="rfC-ud-1UI" secondAttribute="top" constant="10" id="FIr-l9-FiK"/>
-                            <constraint firstItem="rfC-ud-1UI" firstAttribute="bottom" secondItem="lby-eG-eHW" secondAttribute="bottom" id="NMB-A8-HlN"/>
                             <constraint firstItem="rfC-ud-1UI" firstAttribute="trailing" secondItem="NNe-nf-TSg" secondAttribute="trailing" constant="20" id="a1V-ti-7eR"/>
-                            <constraint firstItem="lby-eG-eHW" firstAttribute="top" secondItem="NNe-nf-TSg" secondAttribute="bottom" constant="50" id="bL9-nA-hJu"/>
-                            <constraint firstItem="rfC-ud-1UI" firstAttribute="trailing" secondItem="lby-eG-eHW" secondAttribute="trailing" id="fEd-Oy-dek"/>
+                            <constraint firstItem="lby-eG-eHW" firstAttribute="top" secondItem="NNe-nf-TSg" secondAttribute="bottom" constant="20" id="bL9-nA-hJu"/>
+                            <constraint firstItem="rfC-ud-1UI" firstAttribute="trailing" secondItem="lby-eG-eHW" secondAttribute="trailing" constant="20" id="fEd-Oy-dek"/>
                             <constraint firstItem="NNe-nf-TSg" firstAttribute="leading" secondItem="rfC-ud-1UI" secondAttribute="leading" constant="20" id="fdC-JY-Tun"/>
-                            <constraint firstItem="lby-eG-eHW" firstAttribute="leading" secondItem="ShQ-Zf-TAL" secondAttribute="leading" id="rD6-Ko-7bb"/>
+                            <constraint firstItem="lby-eG-eHW" firstAttribute="leading" secondItem="ShQ-Zf-TAL" secondAttribute="leading" constant="20" id="rD6-Ko-7bb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="rfC-ud-1UI"/>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="lby-eG-eHW" id="aUH-GF-EQv"/>
@@ -112,7 +113,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9a5-lL-ah4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="m7B-7q-Es2" firstAttribute="leading" secondItem="9a5-lL-ah4" secondAttribute="leading" constant="20" id="AMp-lx-823"/>
                             <constraint firstItem="m7B-7q-Es2" firstAttribute="top" secondItem="9a5-lL-ah4" secondAttribute="top" constant="20" id="LCZ-kW-lqD"/>
@@ -121,7 +123,6 @@
                             <constraint firstItem="oJT-9P-37z" firstAttribute="top" secondItem="m7B-7q-Es2" secondAttribute="bottom" constant="10" id="vEI-LA-7Ro"/>
                             <constraint firstItem="9a5-lL-ah4" firstAttribute="trailing" secondItem="oJT-9P-37z" secondAttribute="trailing" constant="20" id="xAh-8s-kFf"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="9a5-lL-ah4"/>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="oJT-9P-37z" id="Bxw-pF-NKa"/>
@@ -151,4 +152,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
