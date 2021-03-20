@@ -49,8 +49,8 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
             // IMPORTANT: make reminder
             let center = UNUserNotificationCenter.current()
             let content = UNMutableNotificationContent()
-            content.title = "title"
-            content.body = "body of the message"
+            content.title = text
+            content.body = text
             content.sound = .default
             
             let earlyDate = Calendar.current.date( byAdding: .minute, value: -30, to: datePicker.date)
