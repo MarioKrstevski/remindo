@@ -8,11 +8,14 @@
 
 import RealmSwift
 import UIKit
+import MapKit
 
-class EntryViewController: UIViewController, UITextFieldDelegate {
+class EntryViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet var textField: UITextField!
     @IBOutlet var datePicker: UIDatePicker!
+    
+    
 
     private let realm = try! Realm()
     public var completionHandler: (() -> Void)?
@@ -25,7 +28,25 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
         datePicker.setDate(Date(), animated: true)
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSaveButton))
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action:"handleTap:")
+            gestureRecognizer.delegate = self
+            mapView.addGestureRecognizer(gestureRecognizer)
     }
+    @IBOutlet weak var mapView: MKMapView!
+    
+    func handleTap(gestureRecognizer: UILongPressGestureRecognizer) {
+        
+        let location = gestureRecognizer.location(in: mapView)
+        let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
+        
+        // Add annotation:
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        mapView.addAnnotation(annotation)
+    }
+    
+    
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
