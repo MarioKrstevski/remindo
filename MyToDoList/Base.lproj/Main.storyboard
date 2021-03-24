@@ -65,33 +65,30 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lby-eG-eHW">
                                 <rect key="frame" x="20" y="126" width="374" height="216"/>
                             </datePicker>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Y3I-rx-B2W">
-                                <rect key="frame" x="0.0" y="362" width="414" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Nfb-Gc-gOh"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQZ-wv-nOD">
+                                <rect key="frame" x="134" y="362" width="146" height="34"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="22"/>
+                                <state key="normal" title="Add Location"/>
                                 <connections>
-                                    <outlet property="delegate" destination="qZW-BN-Ltv" id="axL-mG-08a"/>
+                                    <segue destination="oi0-8f-hmU" kind="show" id="IUW-KT-bLY"/>
                                 </connections>
-                            </mapView>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rfC-ud-1UI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Y3I-rx-B2W" firstAttribute="leading" secondItem="rfC-ud-1UI" secondAttribute="leading" id="2iv-0N-Shw"/>
                             <constraint firstItem="NNe-nf-TSg" firstAttribute="top" secondItem="rfC-ud-1UI" secondAttribute="top" constant="10" id="FIr-l9-FiK"/>
+                            <constraint firstItem="AQZ-wv-nOD" firstAttribute="centerX" secondItem="ShQ-Zf-TAL" secondAttribute="centerX" id="VmU-75-1Ue"/>
                             <constraint firstItem="rfC-ud-1UI" firstAttribute="trailing" secondItem="NNe-nf-TSg" secondAttribute="trailing" constant="20" id="a1V-ti-7eR"/>
                             <constraint firstItem="lby-eG-eHW" firstAttribute="top" secondItem="NNe-nf-TSg" secondAttribute="bottom" constant="20" id="bL9-nA-hJu"/>
+                            <constraint firstItem="AQZ-wv-nOD" firstAttribute="top" secondItem="lby-eG-eHW" secondAttribute="bottom" constant="20" id="eax-dM-Iop"/>
                             <constraint firstItem="rfC-ud-1UI" firstAttribute="trailing" secondItem="lby-eG-eHW" secondAttribute="trailing" constant="20" id="fEd-Oy-dek"/>
-                            <constraint firstItem="Y3I-rx-B2W" firstAttribute="top" secondItem="lby-eG-eHW" secondAttribute="bottom" constant="20" id="fQk-OB-fGD"/>
                             <constraint firstItem="NNe-nf-TSg" firstAttribute="leading" secondItem="rfC-ud-1UI" secondAttribute="leading" constant="20" id="fdC-JY-Tun"/>
-                            <constraint firstItem="rfC-ud-1UI" firstAttribute="trailing" secondItem="Y3I-rx-B2W" secondAttribute="trailing" id="lVR-bs-6C3"/>
                             <constraint firstItem="lby-eG-eHW" firstAttribute="leading" secondItem="ShQ-Zf-TAL" secondAttribute="leading" constant="20" id="rD6-Ko-7bb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="lby-eG-eHW" id="aUH-GF-EQv"/>
-                        <outlet property="mapView" destination="Y3I-rx-B2W" id="rAR-jG-v7T"/>
                         <outlet property="textField" destination="NNe-nf-TSg" id="h0u-MP-AQD"/>
                     </connections>
                 </viewController>
@@ -144,7 +141,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cj6-Nu-tt2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2886" y="176"/>
+            <point key="canvasLocation" x="2829" y="621"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jB6-li-CMo">
+            <objects>
+                <viewController id="oi0-8f-hmU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="76Y-p4-hvr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WNx-lQ-nQg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eQJ-UF-DGE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tsa-WK-fYb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3615" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6ja-yV-nDF">
