@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35372AC6260F475500453D49 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35372AC5260F475500453D49 /* MapController.swift */; };
 		35B061FC26038EB000230AB5 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B061FB26038EB000230AB5 /* LocalNotificationManager.swift */; };
 		83EB5F9F245876410046B5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB5F9E245876410046B5AC /* AppDelegate.swift */; };
 		83EB5FA1245876410046B5AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB5FA0245876410046B5AC /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		065430B57FEF117A5182C4AF /* Pods-MyToDoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyToDoList.release.xcconfig"; path = "Target Support Files/Pods-MyToDoList/Pods-MyToDoList.release.xcconfig"; sourceTree = "<group>"; };
+		35372AC5260F475500453D49 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		35B061FB26038EB000230AB5 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		80944AEE72DB046D807A2444 /* Pods_MyToDoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyToDoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EB5F9B245876410046B5AC /* MyToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +81,7 @@
 				83EB5FB2245879050046B5AC /* EntryViewController.swift */,
 				83EB5FB4245879160046B5AC /* ViewViewController.swift */,
 				35B061FB26038EB000230AB5 /* LocalNotificationManager.swift */,
+				35372AC5260F475500453D49 /* MapController.swift */,
 			);
 			path = MyToDoList;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35B061FC26038EB000230AB5 /* LocalNotificationManager.swift in Sources */,
+				35372AC6260F475500453D49 /* MapController.swift in Sources */,
 				83EB5FA3245876410046B5AC /* ViewController.swift in Sources */,
 				83EB5FB3245879050046B5AC /* EntryViewController.swift in Sources */,
 				83EB5FB5245879160046B5AC /* ViewViewController.swift in Sources */,
